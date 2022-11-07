@@ -1,0 +1,21 @@
+insert into course (title) values ('Tom and Jerry: The Lost Dragon');
+insert into course (title) values ('Turistas');
+insert into course (title) values ('In Good Company');
+insert into course (title) values ('Place of One''s Own, A');
+insert into course (title) values ('Civil Action, A');
+insert into course (title) values ('Intohimon vallassa');
+insert into course (title) values ('Quatermass Xperiment, The');
+insert into course (title) values ('Dragon Eyes');
+insert into course (title) values ('Music Box');
+insert into course (title) values ('Suburban Gothic');
+
+insert into courseMaterial (title) values ('http://dummyimage.com/232x100.png/5fa2dd/ffffff');
+insert into courseMaterial (title) values ('http://dummyimage.com/249x100.png/5fa2dd/ffffff');
+insert into courseMaterial (title) values ('http://dummyimage.com/220x100.png/5fa2dd/ffffff');
+insert into courseMaterial (title) values ('http://dummyimage.com/197x100.png/dddddd/000000');
+insert into courseMaterial (title) values ('http://dummyimage.com/206x100.png/ff4444/ffffff');
+insert into courseMaterial (title) values ('http://dummyimage.com/203x100.png/ff4444/ffffff');
+insert into courseMaterial (title) values ('http://dummyimage.com/217x100.png/5fa2dd/ffffff');
+insert into courseMaterial (title) values ('http://dummyimage.com/194x100.png/cc0000/ffffff');
+insert into courseMaterial (title) values ('http://dummyimage.com/177x100.png/cc0000/ffffff');
+insert into courseMaterial (title) values ('http://dummyimage.com/235x100.png/cc0000/ffffff');
