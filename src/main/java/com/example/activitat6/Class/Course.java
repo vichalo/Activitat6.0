@@ -1,19 +1,16 @@
 package com.example.activitat6.Class;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GeneratorType;
-
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-
 public class Course {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String title;
 
-    @OneToOne@JsonIgnore
-    private CourseMaterial courseMaterial;
+    @OneToMany(mappedBy = "course")
+    private List<CourseMaterial> courseMaterial;
 
     public Course(Long id, String title) {
         this.id = id;
@@ -38,5 +35,17 @@ public class Course {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public List<CourseMaterial> getCourseMaterial() {
+        return courseMaterial;
+    }
+
+    public void setCourseMaterial(List<CourseMaterial> courseMaterial) {
+        this.courseMaterial = courseMaterial;
     }
 }

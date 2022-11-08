@@ -26,9 +26,9 @@ public class CouseController {
         }
     }
 
-    @GetMapping("course/{id}")//path per obtenir un course en concret
-    public ResponseEntity<?> getAlumne(@PathVariable long id) {
-        Course course=courseRepository.getReferenceById(id);
+    @GetMapping("cursos/{id}")//path per obtenir un course en concret
+    public ResponseEntity<?> getCursos(@PathVariable long id) {
+        Course course=courseRepository.findById(id).get();
         if (course==null){
             return ResponseEntity.notFound().build();
         }else {

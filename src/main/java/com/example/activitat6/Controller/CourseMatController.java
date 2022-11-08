@@ -20,7 +20,7 @@ public class CourseMatController {
     private final CourseMatRep courseMatRep;
 
     @GetMapping("material")//
-    public ResponseEntity<?> getGrups(){
+    public ResponseEntity<?> getMaterial(){
         List<CourseMaterial> cursos=courseMatRep.findAll();
         if(cursos.isEmpty()){
             return ResponseEntity.notFound().build();
@@ -29,9 +29,9 @@ public class CourseMatController {
         }
     }
 
-    @GetMapping("courseMat/{id}")//path per obtenir un en concret
-    public ResponseEntity<?> getAlumne(@PathVariable long id) {
-        CourseMaterial courseMat=courseMatRep.getReferenceById(id);
+    @GetMapping("material/{id}")//path per obtenir un en concret
+    public ResponseEntity<?> getMaterialId(@PathVariable Long id) {
+        CourseMaterial courseMat=courseMatRep.findById(id).get();
         if (courseMat==null){
             return ResponseEntity.notFound().build();
         }else {

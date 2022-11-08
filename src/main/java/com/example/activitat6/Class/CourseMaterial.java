@@ -1,5 +1,5 @@
 package com.example.activitat6.Class;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 
 @Entity
@@ -7,7 +7,7 @@ public class CourseMaterial {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String url;
-    @OneToOne(mappedBy = "courseMaterial")
+    @ManyToOne@JsonIgnore
     private Course course;
 
     public CourseMaterial(Long id, String url, Course course) {
@@ -43,4 +43,6 @@ public class CourseMaterial {
     public void setCourse(Course course) {
         this.course = course;
     }
+
+
 }
